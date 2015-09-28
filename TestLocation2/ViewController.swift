@@ -50,9 +50,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
-        print("lat: \(newLocation.coordinate.latitude)")
-        print("lng: \(newLocation.coordinate.longitude)")
-        print("acc: \(newLocation.horizontalAccuracy)")
+//        print("lat: \(newLocation.coordinate.latitude)")
+//        print("lng: \(newLocation.coordinate.longitude)")
+//        print("acc: \(newLocation.horizontalAccuracy)")
         
         lbLat.text = "\(newLocation.coordinate.latitude)"
         lbLng.text = "\(newLocation.coordinate.longitude)"
@@ -81,7 +81,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                     locationStatus = "Allowed to location Access"
                     shouldIAllow = true
             }
-            NSNotificationCenter.defaultCenter().postNotificationName("LabelHasbeenUpdated", object: nil)
+            
+            NSNotificationCenter
+                .defaultCenter()
+                .postNotificationName("LabelHasbeenUpdated", object: nil)
+            
             if (shouldIAllow == true) {
                 print("Location to Allowed")
                 // Start location services
