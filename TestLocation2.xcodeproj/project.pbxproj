@@ -14,6 +14,8 @@
 		4128D0951BB7B8B600385067 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4128D0931BB7B8B600385067 /* LaunchScreen.storyboard */; };
 		4128D0A01BB7B8B600385067 /* TestLocation2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4128D09F1BB7B8B600385067 /* TestLocation2Tests.swift */; };
 		4128D0AB1BB7B8B600385067 /* TestLocation2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4128D0AA1BB7B8B600385067 /* TestLocation2UITests.swift */; };
+		4148AECC1BBA75B0005831B3 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4148AECB1BBA75B0005831B3 /* Constant.swift */; settings = {ASSET_TAGS = (); }; };
+		4148AECE1BBA78AD005831B3 /* AccessKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4148AECD1BBA78AD005831B3 /* AccessKey.swift */; settings = {ASSET_TAGS = (); }; };
 		41EE03B01BB923A90071EC5C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EE03AF1BB923A90071EC5C /* MapViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		FB0B719D39F1B2F1355600EE /* libPods-TestLocation2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D680B8108C799FA70D03F877 /* libPods-TestLocation2.a */; };
 /* End PBXBuildFile section */
@@ -51,6 +53,8 @@
 		4128D0AA1BB7B8B600385067 /* TestLocation2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLocation2UITests.swift; sourceTree = "<group>"; };
 		4128D0AC1BB7B8B600385067 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4128D0B81BB7BED800385067 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		4148AECB1BBA75B0005831B3 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		4148AECD1BBA78AD005831B3 /* AccessKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessKey.swift; sourceTree = "<group>"; };
 		41EE03AF1BB923A90071EC5C /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		B6316E99F1FE00ACFC6B4FFC /* Pods-TestLocation2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestLocation2.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestLocation2/Pods-TestLocation2.release.xcconfig"; sourceTree = "<group>"; };
 		D680B8108C799FA70D03F877 /* libPods-TestLocation2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestLocation2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +123,8 @@
 			children = (
 				4128D08A1BB7B8B600385067 /* AppDelegate.swift */,
 				41EE03AF1BB923A90071EC5C /* MapViewController.swift */,
+				4148AECB1BBA75B0005831B3 /* Constant.swift */,
+				4148AECD1BBA78AD005831B3 /* AccessKey.swift */,
 				4128D08C1BB7B8B600385067 /* ViewController.swift */,
 				4128D08E1BB7B8B600385067 /* Main.storyboard */,
 				4128D0911BB7B8B600385067 /* Assets.xcassets */,
@@ -321,8 +327,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4128D08D1BB7B8B600385067 /* ViewController.swift in Sources */,
+				4148AECE1BBA78AD005831B3 /* AccessKey.swift in Sources */,
 				41EE03B01BB923A90071EC5C /* MapViewController.swift in Sources */,
 				4128D08B1BB7B8B600385067 /* AppDelegate.swift in Sources */,
+				4148AECC1BBA75B0005831B3 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
