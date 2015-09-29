@@ -46,9 +46,14 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     func mapView(mapView: GMSMapView!, idleAtCameraPosition position: GMSCameraPosition!) {
         vGoogleMap.clear()
         
-        let lat = position.target.latitude
-        let lng = position.target.longitude
-        print("lat: \(lat), lng: \(lng)")
+        
+        let coordinate = position.target
+        let lat = coordinate.latitude
+        let lng = coordinate.longitude
+        let marker = GMSMarker(position: coordinate)
+        marker.title = "Center Here"
+        marker.snippet = "lat: \(lat), lng: \(lng)"
+        marker.map = vGoogleMap
     }
     
     func mapView(mapView: GMSMapView!, didTapAtCoordinate coordinate: CLLocationCoordinate2D) {
