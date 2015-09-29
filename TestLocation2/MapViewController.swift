@@ -9,7 +9,7 @@
 import UIKit
 import GoogleMaps
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, GMSMapViewDelegate {
     
     @IBOutlet var vGoogleMap : GMSMapView!
     
@@ -23,12 +23,11 @@ class MapViewController: UIViewController {
     }
     
     func initGoogleMap() {
-        
-        
-        
+        vGoogleMap.delegate = self
         vGoogleMap.myLocationEnabled = true
         vGoogleMap.settings.myLocationButton = true
         vGoogleMap.settings.compassButton = true
+        vGoogleMap.settings.indoorPicker = true
         
         var camera = GMSCameraPosition.cameraWithLatitude(16, longitude: 100, zoom: 6)
         
@@ -38,9 +37,35 @@ class MapViewController: UIViewController {
             let lng = mylocation.coordinate.longitude
             camera = GMSCameraPosition.cameraWithLatitude(lat, longitude: lng, zoom: 6)
         } else {
-            camera = GMSCameraPosition.cameraWithLatitude(16, longitude: 100, zoom: 6)
+//            camera = GMSCameraPosition.cameraWithLatitude(16, longitude: 100, zoom: 6)
         }
         
         vGoogleMap.camera = camera
+    }
+    
+    func mapView(mapView: GMSMapView!, idleAtCameraPosition position: GMSCameraPosition!) {
+        vGoogleMap.clear()
+        
+        let lat = position.target.latitude
+        let lng = position.target.longitude
+        print("lat: \(lat), lng: \(lng)")
+    }
+    
+    func mapView(mapView: GMSMapView!, didTapAtCoordinate coordinate: CLLocationCoordinate2D) {
+//        let lat = coordinate.latitude
+//        let lng = coordinate.longitude
+//        print("lat: \(lat), lng: \(lng)")
+        makeMarker(coordinate)
+    }
+    
+    func makeMarker(coordinate: CLLocationCoordinate2D) {
+        vGoogleMap.clear()
+        
+        let lat = coordinate.latitude
+        let lng = coordinate.longitude
+        let marker = GMSMarker(position: coordinate)
+        marker.title = "Tab Here"
+        marker.snippet = "lat: \(lat), lng: \(lng)"
+        marker.map = vGoogleMap
     }
 }
